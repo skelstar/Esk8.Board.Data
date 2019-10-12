@@ -10,6 +10,7 @@ class VescData
     bool moving;
     float ampHours;
     float odometer; // in kilometers
+    bool vescOnline;
 };
 
 #endif
