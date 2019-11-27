@@ -11,6 +11,7 @@ class VescData
     float ampHours;
     float odometer; // in kilometers
     bool vescOnline;
+    unsigned long id;
 };
 
 #endif
