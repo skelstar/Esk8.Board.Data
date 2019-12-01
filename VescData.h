@@ -14,4 +14,10 @@ class VescData
     unsigned long id;
 };
 
+class ControllerData
+{
+  public:
+    uint8_t throttle;
+};
+
 #endif
