@@ -18,6 +18,7 @@ class ControllerData
 {
   public:
     uint8_t throttle;
+    unsigned long id;
 };
 
 #endif
