@@ -12,7 +12,7 @@ class VescData
     float odometer; // in kilometers
     bool vescOnline;
     unsigned long id;
-    uint_16t missing_packets;
+    uint16_t missing_packets;
 };
 
 class ControllerData
