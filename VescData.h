@@ -20,6 +20,9 @@ class ControllerData
   public:
     uint8_t throttle;
     unsigned long id;
+    uint8_t command;
 };
+
+#define COMMAND_REQUEST_UPDATE  1
 
 #endif
