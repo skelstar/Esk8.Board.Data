@@ -3,9 +3,19 @@
 
 #include "Arduino.h"
 
+enum ReasonType 
+{
+  BOARD_STOPPED,
+  BOARD_MOVING,
+  FIRST_PACKET,
+  LAST_WILL,
+  REQUESTED
+};
+
 class VescData
 {
   public:
+
     float batteryVoltage;
     bool moving;
     float ampHours;
@@ -13,6 +23,7 @@ class VescData
     bool vescOnline;
     unsigned long id;
     uint16_t missing_packets;
+    ReasonType reason;
 };
 
 class ControllerData
