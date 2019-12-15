@@ -9,7 +9,8 @@ enum ReasonType
   BOARD_MOVING,
   FIRST_PACKET,
   LAST_WILL,
-  REQUESTED
+  REQUESTED,
+  VESC_OFFLINE,
 };
 
 class VescData
