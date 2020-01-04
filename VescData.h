@@ -11,6 +11,7 @@ enum ReasonType
   LAST_WILL,
   REQUESTED,
   VESC_OFFLINE,
+  MISSED_PACKET,
 };
 
 class VescData
@@ -23,7 +24,6 @@ class VescData
     float odometer; // in kilometers
     bool vescOnline;
     unsigned long id;
-    uint16_t missing_packets;
     ReasonType reason;
 };
 
