@@ -46,6 +46,7 @@ class ControllerConfig
 {
   public:
     uint16_t send_interval;
+    bool cruise_control_enabled;
 };
 
 class BoardConfig
