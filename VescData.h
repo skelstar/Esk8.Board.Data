@@ -35,6 +35,12 @@ class ControllerData
     uint8_t command;
 };
 
+class ControllerMetadata
+{
+  public:
+    uint16_t send_interval;
+}
+
 #define COMMAND_REQUEST_UPDATE  1
 
 #endif
