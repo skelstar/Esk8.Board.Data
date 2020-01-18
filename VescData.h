@@ -39,12 +39,18 @@ class ControllerData
     uint8_t throttle;
     unsigned long id;
     uint8_t command;
+    bool cruise_control;
 };
 
 class ControllerConfig
 {
   public:
     uint16_t send_interval;
+};
+
+class BoardConfig
+{
+  public:
 };
 
 #define COMMAND_REQUEST_UPDATE  1
