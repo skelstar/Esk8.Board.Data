@@ -16,7 +16,7 @@ enum ReasonType
 
 enum PacketType
 {
-  NORMAL,
+  CONTROL,
   CONFIG,
 };
 
