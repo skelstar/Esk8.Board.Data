@@ -17,6 +17,7 @@ enum ReasonType
 enum PacketType
 {
   NORMAL,
+  CONFIG,
 };
 
 class VescData
