@@ -14,6 +14,11 @@ enum ReasonType
   MISSED_PACKET,
 };
 
+enum PacketType
+{
+  NORMAL,
+};
+
 class VescData
 {
   public:
@@ -35,11 +40,11 @@ class ControllerData
     uint8_t command;
 };
 
-class ControllerMetadata
+class ControllerConfig
 {
   public:
     uint16_t send_interval;
-}
+};
 
 #define COMMAND_REQUEST_UPDATE  1
 
