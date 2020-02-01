@@ -3,7 +3,7 @@
 
 #include "Arduino.h"
 
-enum ReasonType 
+enum ReasonType
 {
   BOARD_STOPPED,
   BOARD_MOVING,
@@ -20,39 +20,49 @@ enum PacketType
   CONFIG,
 };
 
+enum ThrottleMode
+{
+  ANALOG_TRIGGER_MODE,
+  TWO_BUTTON_MODE
+};
+
 class VescData
 {
-  public:
-
-    float batteryVoltage;
-    bool moving;
-    float ampHours;
-    float odometer; // in kilometers
-    bool vescOnline;
-    unsigned long id;
-    ReasonType reason;
+public:
+  float batteryVoltage;
+  bool moving;
+  float ampHours;
+  float odometer; // in kilometers
+  bool vescOnline;
+  unsigned long id;
+  ReasonType reason;
 };
 
 class ControllerData
 {
-  public:
-    uint8_t throttle;
-    unsigned long id;
-    uint8_t command;
-    bool cruise_control;
+public:
+  uint8_t throttle;
+  unsigned long id;
+  uint8_t command;
+  bool cruise_control;
+  bool accel_pressed;
+  bool brake_pressed;
 };
 
 class ControllerConfig
 {
-  public:
-    uint16_t send_interval;
+public:
+  uint16_t send_interval;
+  bool cruise_control_enabled;
+  unsigned long throttle_smoothing_period;
+  ThrottleMode throttle_mode;
 };
 
 class BoardConfig
 {
-  public:
+public:
 };
 
-#define COMMAND_REQUEST_UPDATE  1
+#define COMMAND_REQUEST_UPDATE 1
 
 #endif
