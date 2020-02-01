@@ -51,11 +51,10 @@ public:
 
 class ControllerConfig
 {
-public:
-  uint16_t send_interval;
-  bool cruise_control_enabled;
-  unsigned long throttle_smoothing_period;
-  ThrottleMode throttle_mode;
+  public:
+    uint16_t send_interval;
+    bool cruise_control_enabled;
+    unsigned long throttle_smoothing_period;
 };
 
 class BoardConfig
