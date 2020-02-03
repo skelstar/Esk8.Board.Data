@@ -20,12 +20,6 @@ enum PacketType
   CONFIG,
 };
 
-enum ThrottleMode
-{
-  ANALOG_TRIGGER_MODE,
-  TWO_BUTTON_MODE
-};
-
 class VescData
 {
 public:
@@ -45,9 +39,6 @@ public:
   unsigned long id;
   uint8_t command;
   bool cruise_control;
-  bool accel_pressed;
-  bool brake_pressed;
-  ThrottleMode throttle_mode;
 };
 
 class ControllerConfig
@@ -55,7 +46,6 @@ class ControllerConfig
   public:
     uint16_t send_interval;
     bool cruise_control_enabled;
-    unsigned long throttle_smoothing_period;
 };
 
 class BoardConfig
