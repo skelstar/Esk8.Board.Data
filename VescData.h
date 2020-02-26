@@ -12,6 +12,7 @@ enum ReasonType
   REQUESTED,
   VESC_OFFLINE,
   MISSED_PACKET,
+  RESPONSE,
 };
 
 enum PacketType
@@ -46,11 +47,13 @@ class ControllerConfig
   public:
     uint16_t send_interval;
     bool cruise_control_enabled;
+    unsigned long id;
 };
 
 class BoardConfig
 {
 public:
+  unsigned long id;
 };
 
 #define COMMAND_REQUEST_UPDATE 1
