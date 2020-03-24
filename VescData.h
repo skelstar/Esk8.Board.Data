@@ -27,6 +27,7 @@ public:
   float batteryVoltage;
   bool moving;
   float ampHours;
+  float motorCurrent;
   float odometer; // in kilometers
   bool vescOnline;
   unsigned long id;
